@@ -3,13 +3,18 @@
 // 2/15/16
 // my first javascript i guess
 
-function myFunc(p1,p2)
+function myFunc()
 {
-	alert(p1);
-	if(p1 == p2)
+	var pass1 =document.getElementByName(p1).value;
+	var pass2 = document.getElementByName(p2).value;
+	
+	alert("test");
+	if(pass1 == pass2)
 	{
-		if(p1<=8)
-			{alert("password not long enough");}
+		if(pass1 <=8)
+		{
+				alert("password not long enough");
+		}
 		else 
 		{
 			alert("passwords match!");
@@ -24,5 +29,10 @@ function myFunc(p1,p2)
 	
 		
 	
-	alert(p1);
+	//alert(p1);
 }
+
+
+
+//https://wiki.ittc.ku.edu/ittc_wiki/index.php/EECS448:Lab3
+//file:///home/aevans/EECS_448/Lab_03/Lab_03/excersize1.html
