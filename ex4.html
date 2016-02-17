@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+        <style>
+        p.p1
+        {
+          background-color: rgb(225,102,225);
+          color: white;
+          font-family: georgia;
+          font-size: 14pt;
+          border-style: solid;
+          border-width: 10px;
+          border-color:rgb(128,223,225);
+        }
+        p.p2
+        {
+            font-weight: bold;
+        }
+
+        body
+        {
+
+          background-color: rgb(204,255,238);
+
+        }
+
+
+         </style>
+         <script>
+         function myFunc()
+         {
+           //alert("test");
+
+           var color1 = document.getElementById('c1').value;
+          var color2 = document.getElementById('c2').value;
+           var color3 = document.getElementById('c3').value;
+           var back1 = document.getElementById('b1').value;
+           var back2 = document.getElementById('b2').value;
+           var back3 = document.getElementById('b3').value;
+           if((0<=color1 && color1<=255) &&(0<=color2 && color2<=255)&&(0<=color3 && color3<=255)&&(0<=back1 && back1<=255)&&(0<=back2 && back2<=255)&&(0<=back3 && back3<=255) )
+           {
+             document.getElementById("p1").style.backgroundColor= "rgb("+back1+","+back2+","+back3+")";
+             document.getElementById("p1").style.borderColor= "rgb("+color1+","+color2+","+color3+")";
+           }
+          else {
+            alert("You must enter in numbers between 0 and 255.");
+          }
+
+         }
+         </script>
+
+
+</head>
+<body>
+
+<h1></h1>
+<p class="p1" id="p1">
+  Fourscore and seven years ago our fathers brought forth, upon this continent, a new nation, conceived in liberty and dedicated to the proposition that "all men are created equal."
+  <br>Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battlefield of that war. We have come to dedicate a portion of it, as a final resting place for those who died here, that the nation might live. This we may, in all propriety do. But in a larger sense, we cannot dedicate, we cannot consecrate, we cannot hallow, this ground. The brave men, living and dead, who struggled here, have hallowed it, far above our poor power to add or detract. The world will little note, nor long remember what we say here; while it can never forget what they did here.
+  <br>It is rather for us the living, we here be dedicated to the great task remaining before us that from these honored dead we take increased devotion to that cause for which they here gave the last full measure of devotion that we here highly resolve that these dead shall not have died in vain, that this nation shall have a new birth of freedom, and that government of the people, by the people, for the people shall not perish from the earth.
+</p>
+<p class="p2" >
+
+<form>
+  BORDER: <br><br>red value:<br>
+  <input type="text" id="c1"><br>
+  green value:<br>
+  <input type="text" id="c2"><br>
+  blue value:<br>
+  <input type="text" id="c3">
+<br><br>BACKGROUND:<br><br>
+  <input type="text" id="b1"><br>
+  green value:<br>
+  <input type="text" id="b2"><br>
+  blue value:<br>
+  <input type="text" id="b3"><br><br>(units are in rgb, eg 0-255)<br>
+  <button type = "button" onclick = "myFunc()"> Submit</button>
+</p1>
+
+</body>
+</html>
